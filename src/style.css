@@ -339,9 +339,8 @@ section {
   width: 100%;
   max-width: 500px;
   aspect-ratio: 1.586; /* Credit card aspect ratio */
-  background-image: url('/titanium_card.png');
-  background-size: cover;
-  background-position: center;
+  background-color: var(--color-bg);
+  color: var(--color-text);
   border-radius: 20px;
   display: flex;
   justify-content: center;
@@ -595,4 +594,14 @@ footer {
     flex-wrap: wrap;
     gap: 2rem;
   }
+}
+
+/* Mobile Overrides */
+@media (max-width: 768px) {
+  .logo img { height: 35px !important; }
+  .cta-button { padding: 0.5rem 1rem; font-size: 0.75rem; }
+  .corporate-grid > div { min-width: 100% !important; border-left: none !important; padding-left: 0 !important; margin-bottom: 1.5rem; }
+  .hero-content { flex-direction: column !important; text-align: center !important; }
+  .hero-content h4, .hero-content .subtitle { text-align: center !important; }
+  .footer-bottom { flex-direction: column; align-items: center; text-align: center; gap: 1.5rem; }
 }
