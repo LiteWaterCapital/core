@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="logo.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Risk Framework | Litewater Capital DAO LLC</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  </head>
+  <body>
+    <header id="header" class="scrolled">
+      <div class="container">
+        <nav>
+          <a href="index.html" class="logo">
+            <img src="logo.png" alt="Litewater Capital Logo" style="height: 40px;" />
+          </a>
+          <a href="index.html" class="cta-button">Return to Terminal</a>
+        </nav>
+      </div>
+    </header>
+
+    <section class="hero" style="padding-top: 8rem; padding-bottom: 5rem; min-height: 80vh;">
+      <div class="hero-bg"></div>
+      <div class="container">
+        <div class="hero-content reveal" style="max-width: 1000px; margin: 0 auto; text-align: left;">
+          <h1 class="heading-lg" style="text-align: center; font-size: 2.5rem;">Institutional <span class="text-blue">Risk Framework</span></h1>
+        
+        <div class="glass-panel" style="padding: 3rem; margin-top: 3rem;">
+          
+<p style="color: var(--color-text-secondary); margin-bottom: 2rem;"><strong>Last Updated: May 2026</strong></p>
+<p style="color: var(--color-text-secondary); margin-bottom: 2rem; line-height: 1.8;">LiteWater Capital DAO LLC maintains a rigorous, transparent risk management framework to ensure the safety and stability of our treasury operations. This document outlines the primary risk vectors and our mitigations.</p>
+
+<h3 style="color: var(--color-accent-blue); margin-bottom: 1rem; font-family: var(--font-serif); font-size: 1.5rem;">1. Collateral & Economic Risk</h3>
+<p style="color: var(--color-text-secondary); margin-bottom: 1rem; line-height: 1.8;">The JAB01 token operates as the core unit of account for our treasury. <strong>JAB01 is tokenized against legal treasury obligations and wrapped and entangled with our base treasury Genesis 3 UTXOs.</strong> By relying on legally binding obligations rather than volatile digital assets, we minimize the market risk typically associated with over-collateralized algorithmic stablecoins.</p>
+<p style="color: var(--color-text-secondary); margin-bottom: 1rem; line-height: 1.8;"><strong>Overcollateralization Strategy:</strong><br/>Our treasury strategy exclusively utilizes overcollateralized positions secured by sUSD, which is inherently backed by Genesis 3 UTXOs. We seek to provide structural stability through conservative Liquidation Loan-to-Value (LLTV) positions, meticulously managed to shield our treasury and our partners from cascading liquidation events during periods of high market volatility.</p>
+<p style="color: var(--color-text-secondary); margin-bottom: 2rem; line-height: 1.8;"><strong>Mitigation:</strong></p>
+<ul style="color: var(--color-text-secondary); line-height: 1.8; margin-bottom: 2rem; margin-left: 1.5rem;">
+  <li>Strict auditing of the underlying legal treasury obligations and UTXO provenance.</li>
+  <li>Real-time on-chain telemetry to monitor the treasury reserve ratio, LLTV health factors, and the 1.00 USDC target peg.</li>
+</ul>
+
+<h3 style="color: var(--color-accent-blue); margin-bottom: 1rem; font-family: var(--font-serif); font-size: 1.5rem;">2. Smart Contract Risk</h3>
+<p style="color: var(--color-text-secondary); margin-bottom: 1rem; line-height: 1.8;">All decentralized protocols carry inherent smart contract risk, including the potential for bugs, logic errors, or economic exploits.</p>
+<p style="color: var(--color-text-secondary); margin-bottom: 1rem; line-height: 1.8;"><strong>Mitigation:</strong></p>
+<ul style="color: var(--color-text-secondary); line-height: 1.8; margin-bottom: 2rem; margin-left: 1.5rem;">
+  <li>We utilize industry-standard, battle-tested codebases (e.g., Base L2, Morpho, Uniswap V3) along with next-level Westwyrd security, infrastructure and protocols.</li>
+  <li><strong>Audits:</strong> Core protocol contracts are subject to rigorous audits by top-tier security firms (Pending).</li>
+  <li><strong>Bug Bounties:</strong> We are establishing an Immunefi bug bounty program to incentivize responsible disclosure of vulnerabilities (Pending).</li>
+</ul>
+
+<h3 style="color: var(--color-accent-blue); margin-bottom: 1rem; font-family: var(--font-serif); font-size: 1.5rem;">3. Oracle Risk</h3>
+<p style="color: var(--color-text-secondary); margin-bottom: 1rem; line-height: 1.8;">DeFi protocols rely on external data feeds (Oracles) to determine asset prices and trigger liquidations or minting functions. If an oracle fails or is manipulated, the protocol could act on bad data.</p>
+<p style="color: var(--color-text-secondary); margin-bottom: 1rem; line-height: 1.8;"><strong>Mitigation:</strong></p>
+<ul style="color: var(--color-text-secondary); line-height: 1.8; margin-bottom: 2rem; margin-left: 1.5rem;">
+  <li>We rely on decentralized, robust oracle networks (like Chainlink) with multiple data providers to ensure redundancy and prevent single-point-of-failure manipulations.</li>
+  <li>Circuit breakers are implemented to pause operations if oracle divergence exceeds safe thresholds.</li>
+</ul>
+
+<h3 style="color: var(--color-accent-blue); margin-bottom: 1rem; font-family: var(--font-serif); font-size: 1.5rem;">4. Regulatory Risk</h3>
+<p style="color: var(--color-text-secondary); margin-bottom: 1rem; line-height: 1.8;">The regulatory landscape for digital assets, DAOs, and stablecoins is rapidly evolving. Changes in law could impact the operation of the DAO or the legal standing of the treasury obligations.</p>
+<p style="color: var(--color-text-secondary); margin-bottom: 1rem; line-height: 1.8;"><strong>Mitigation:</strong></p>
+<ul style="color: var(--color-text-secondary); line-height: 1.8; margin-bottom: 2rem; margin-left: 1.5rem;">
+  <li>LiteWater is legally registered as a Wyoming DAO LLC (WY Reg: <code>2026-001972207</code>), utilizing a clear statutory framework designed for decentralized organizations.</li>
+  <li>We strictly restrict access to our smart contracts from unsupported jurisdictions, including US retail.</li>
+</ul>
+
+        </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="footer-content" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 3rem; margin-bottom: 2rem; border-top: 1px solid var(--color-border); padding-top: 2rem;">
+          <div class="footer-col">
+            <a href="index.html" class="logo">
+              <img src="logo.png" alt="Litewater Capital Logo" style="height: 40px;" />
+            </a>
+            <p style="margin-top: 1rem; font-size: 0.85rem; color: var(--color-text-secondary);">Sovereign Treasury Auxiliary for its parent church.</p>
+            <a href="contact.html" class="primary-btn" style="text-decoration: none; display: inline-block; margin-top: 1rem; padding: 0.5rem 1rem; font-size: 0.8rem;">Contact Us</a>
+          </div>
+
+          <div class="footer-col">
+            <h4 style="font-family: var(--font-mono); font-size: 0.85rem; text-transform: uppercase; margin-bottom: 1rem; color: white;">Open Source</h4>
+            <ul style="list-style: none; padding: 0; font-size: 0.85rem; display: flex; flex-direction: column; gap: 0.5rem;">
+              <li><a href="https://github.com/LiteWaterCapital/core" target="_blank" style="color: var(--color-text-secondary); text-decoration: none;">GitHub Repository</a></li>
+              <li><a href="https://docs.litewatercapital.com" target="_blank" style="color: var(--color-text-secondary); text-decoration: none;">GitBook Docs</a></li>
+              <li><a href="#" style="color: var(--color-text-secondary); text-decoration: none;">Smart Contract Audits (Pending)</a></li>
+              <li><a href="#" style="color: var(--color-text-secondary); text-decoration: none;">Bug Bounty (Pending)</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4 style="font-family: var(--font-mono); font-size: 0.85rem; text-transform: uppercase; margin-bottom: 1rem; color: white;">Legal & Risk</h4>
+            <ul style="list-style: none; padding: 0; font-size: 0.85rem; display: flex; flex-direction: column; gap: 0.5rem;">
+              <li><a href="risk.html" style="color: var(--color-text-secondary); text-decoration: none;">Risk Framework</a></li>
+              <li><a href="terms.html" style="color: var(--color-text-secondary); text-decoration: none;">Terms of Service</a></li>
+              <li><a href="regulatory.html" style="color: var(--color-text-secondary); text-decoration: none;">Regulatory Disclaimers</a></li>
+              <li><a href="privacy.html" style="color: var(--color-text-secondary); text-decoration: none;">Privacy Policy</a></li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="footer-bottom" style="border-top: 1px solid var(--color-border); padding-top: 2rem; display: flex; justify-content: space-between; align-items: center; font-size: 0.75rem; font-family: var(--font-mono); flex-wrap: wrap; gap: 1rem;">
+          <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+            <p>&copy; 2026 LiteWater Capital DAO LLC. All Rights Reserved.</p>
+            <p>Protected by the Kingdom Economy.</p>
+          </div>
+          <a href="https://westwyrd.ventures/ventures" target="_blank" style="display: flex; align-items: center; gap: 0.75rem; text-decoration: none; color: white; background: rgba(0,0,0,0.5); padding: 0.5rem 1rem; border-radius: 6px; border: 1px solid rgba(255,255,255,0.1); transition: all 0.3s ease;">
+            <span style="font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1px; color: var(--color-text-secondary);">Infrastructure Partner</span>
+            <img src="westwyrd_logo.png" alt="Westwyrd Ventures" style="height: 20px; filter: brightness(0) invert(1);" />
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <script type="module" src="src/main.js"></script>
+  </body>
+</html>
