@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/logo.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Active Vaults | Institutional Markets</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <style>
+      :root {
+        --color-bg-primary: #0a0a0a;
+        --color-bg-secondary: #111111;
+        --color-text-primary: #f3f4f6;
+        --color-text-secondary: #9ca3af;
+        --color-accent: #3b82f6;
+        --color-border: #333333;
+        --font-main: 'Inter', system-ui, sans-serif;
+        --font-mono: 'SFMono-Regular', Consolas, monospace;
+      }
+      body { margin: 0; padding: 0; background-color: var(--color-bg-primary); color: var(--color-text-primary); font-family: var(--font-main); line-height: 1.6; }
+      .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+      header { padding: 1.5rem 0; border-bottom: 1px solid var(--color-border); background: rgba(10, 10, 10, 0.9); }
+      nav { display: flex; justify-content: space-between; align-items: center; }
+      .logo img { height: 40px; }
+      .cta-button { background: transparent; color: var(--color-text-primary); border: 1px solid var(--color-border); padding: 0.5rem 1.5rem; border-radius: 4px; text-decoration: none; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; }
+      
+      #gate-modal { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.95); backdrop-filter: blur(10px); display: flex; align-items: center; justify-content: center; z-index: 9999; }
+      .gate-content { background: var(--color-bg-secondary); border: 1px solid var(--color-border); padding: 3rem; border-radius: 8px; max-width: 500px; text-align: center; }
+      .gate-content h2 { color: #ef4444; margin-top: 0; font-family: var(--font-mono); text-transform: uppercase; }
+      .gate-content p { color: var(--color-text-secondary); font-size: 0.9rem; margin-bottom: 2rem; text-align: left;}
+      .agree-btn { background: var(--color-accent); color: white; border: none; padding: 1rem 2rem; border-radius: 4px; font-weight: bold; cursor: pointer; width: 100%; text-transform: uppercase; letter-spacing: 1px; }
+      
+      .corp-banner { background: var(--color-bg-secondary); border-bottom: 1px solid var(--color-border); padding: 1rem 0; font-family: var(--font-mono); font-size: 0.8rem; }
+      .footer-bottom { display: flex; justify-content: space-between; align-items: center; font-size: 0.75rem; font-family: var(--font-mono); flex-wrap: wrap; gap: 1rem; }
+      .corp-banner-inner { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+      .corp-item { display: flex; flex-direction: column; gap: 0.2rem; }
+      .corp-label { color: var(--color-text-secondary); text-transform: uppercase; font-size: 0.7rem; letter-spacing: 1px; }
+      .corp-value { color: white; }
+      
+      .vault-section { padding: 4rem 0; border-bottom: 1px solid var(--color-border); }
+      .vault-header { display: flex; align-items: center; gap: 2rem; margin-bottom: 3rem; }
+      .vault-header img { width: 120px; height: 120px; }
+      .data-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; font-family: var(--font-mono); }
+      .data-card { background: rgba(255,255,255,0.03); padding: 1.5rem; border: 1px solid var(--color-border); border-radius: 6px; }
+      .data-label { color: var(--color-text-secondary); font-size: 0.75rem; text-transform: uppercase; margin-bottom: 0.5rem; }
+      .data-value { color: white; font-size: 0.9rem; word-break: break-all; }
+      .highlight { color: #10b981; }
+    </style>
+  </head>
+  <body>
+    <!-- Institutional Gate Modal -->
+    <div id="gate-modal">
+      <div class="gate-content">
+        <h2>Restricted Access</h2>
+        <p>The Litewater Capital markets operate as B2B decentralized infrastructure, specifically for DeFi lending protocols. The information on this page relates to over-collateralized Morpho lending markets designed strictly for institutional liquidity providers, and conservatively structured to protect our Kingdom Economy.</p>
+        <p><strong>ATTESTATION:</strong> By proceeding, you attest that you are an Accredited Investor or institutional entity, and that you understand these markets do not represent retail investment contracts or securities offered to the general public.</p>
+        <button class="agree-btn" onclick="document.getElementById('gate-modal').style.display='none'">I Attest & Agree</button>
+      </div>
+    </div>
+
+    <!-- Corporate Verification Banner -->
+    <div class="corp-banner">
+      <div class="container corp-banner-inner">
+        <div class="corp-item">
+          <span class="corp-label">Legal Entity</span>
+          <span class="corp-value">LiteWater Capital DAO LLC</span>
+        </div>
+        <div class="corp-item">
+          <span class="corp-label">WY Registration</span>
+          <span class="corp-value">2026-001972207</span>
+        </div>
+        <div class="corp-item">
+          <span class="corp-label">LEI</span>
+          <span class="corp-value">984500360E6D6AG10C28</span>
+        </div>
+        <div class="corp-item">
+          <span class="corp-label">DAO Treasury Address</span>
+          <span class="corp-value" style="color: #10b981;">0x4D114ea53c59b11feFD31B234F8d0E5aEf49a2Ef</span>
+        </div>
+      </div>
+    </div>
+
+    <header>
+      <div class="container">
+        <nav>
+          <a href="/" class="logo"><img src="/logo.png" alt="Litewater Capital Logo" /></a>
+          <div style="display: flex; gap: 2rem; align-items: center;">
+            <a href="about.html" style="color: var(--color-text-primary); text-decoration: none; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; transition: color 0.3s ease;" onmouseover="this.style.color='var(--color-accent)'" onmouseout="this.style.color='var(--color-text-primary)'">About Us</a>
+            <a href="contact.html" style="color: var(--color-text-primary); text-decoration: none; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; transition: color 0.3s ease;" onmouseover="this.style.color='var(--color-accent)'" onmouseout="this.style.color='var(--color-text-primary)'">Contact</a>
+            <a href="/" class="cta-button">Back to Main</a>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <div class="container">
+      <div style="padding: 3rem 0 1rem 0;">
+        <h4 style="font-family: var(--font-mono); color: var(--color-accent); text-transform: uppercase; letter-spacing: 1px;">Sovereign Infrastructure</h4>
+        <h1 style="margin-top: 0.5rem;">Active Institutional Vaults</h1>
+        <p style="color: var(--color-text-secondary); max-width: 700px;">
+          The JAB Series and LiteWater Coin markets are the foundational bridge assets of the LiteWater ecosystem. These isolated Morpho Blue markets utilize hard-coded risk parameters, offering highly restricted, algorithmically enforced yield environments for our elite liquidity partners.
+        </p>
+      </div>
+
+      <section class="vault-section">
+        <div class="vault-header">
+          <img src="/JAB01_logo.svg" alt="JAB Logo" />
+          <div>
+            <h2>JAB01 Isolated Market</h2>
+            <span style="background: rgba(16, 185, 129, 0.1); color: #10b981; padding: 0.25rem 0.75rem; border-radius: 4px; font-size: 0.8rem; font-family: var(--font-mono);">MARKET: LIVE</span>
+          </div>
+        </div>
+        <div class="data-grid">
+          <div class="data-card">
+            <div class="data-label">Morpho Market ID</div>
+            <div class="data-value"><a href="https://app.morpho.org/market?id=0xb230ad6aa2142119fe48f92a1f904fa34b8dccfa9f3afce58cb4af534b535e20&network=base" target="_blank" style="color: var(--color-accent); text-decoration: none; word-break: break-all;">0xb230ad6aa2142119fe48f92a1f904fa34b8dccfa9f3afce58cb4af534b535e20 <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.75rem; margin-left: 0.25rem;"></i></a></div>
+          </div>
+          <div class="data-card">
+            <div class="data-label">Risk Parameters</div>
+            <div class="data-value highlight">77% LLTV Hard Cap</div>
+            <div class="data-value" style="margin-top: 0.5rem; font-size: 0.8rem; color: var(--color-text-secondary);">AdaptiveCurveIRM (< 90% Utilization)</div>
+          </div>
+          <div class="data-card">
+            <div class="data-label">Universal Rewards Distributor</div>
+            <div class="data-value">0x5400dbb270c956e8985184335a1c62aca6ce1333</div>
+          </div>
+          <div class="data-card">
+            <div class="data-label">URD Incentive Redemption</div>
+            <div class="data-value"><a href="https://app.uniswap.org/swap?chain=base&inputCurrency=0x72B6a247aF0F1640cfB4952389c2DE7D029A6C6B" target="_blank" style="color: var(--color-accent); text-decoration: none; word-break: break-all;">Uniswap V3 Exchange <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.75rem; margin-left: 0.25rem;"></i></a></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="vault-section">
+        <div class="vault-header">
+          <img src="/JAB78_logo.svg" alt="JAB78 Logo" />
+          <div>
+            <h2>JAB78 Isolated Market</h2>
+            <span style="background: rgba(59, 130, 246, 0.1); color: var(--color-accent); padding: 0.25rem 0.75rem; border-radius: 4px; font-size: 0.8rem; font-family: var(--font-mono);">MARKET: PENDING DEPLOYMENT</span>
+          </div>
+        </div>
+        <div class="data-grid">
+          <div class="data-card">
+            <div class="data-label">Morpho Market ID</div>
+            <div class="data-value" style="color: var(--color-text-secondary);">Deployment Scheduled</div>
+          </div>
+          <div class="data-card">
+            <div class="data-label">Risk Parameters</div>
+            <div class="data-value highlight">86% LLTV Hard Cap</div>
+          </div>
+        </div>
+      </section>
+
+      <div style="padding: 3rem 0 1rem 0; margin-top: 2rem; border-top: 1px solid var(--color-border);">
+        <h4 style="font-family: var(--font-mono); color: var(--color-accent); text-transform: uppercase; letter-spacing: 1px;">Kingdom Economy</h4>
+        <h1 style="margin-top: 0.5rem;">The Institutional Series</h1>
+        <p style="color: var(--color-text-secondary); max-width: 700px;">
+          The Institutional Series features our premier sovereign infrastructure assets. Engineered for high-capacity liquidity providers, these markets offer expanded algorithmic boundaries while maintaining absolute cryptographic integrity.
+        </p>
+      </div>
+
+      <section class="vault-section" style="border-bottom: none;">
+        <div class="vault-header">
+          <img src="/LTWC_The_Winner_Vectorized.svg" alt="LTWC Logo" style="filter: drop-shadow(0 0 10px rgba(59, 130, 246, 0.4)); width: 120px; height: 120px; border-radius: 50%;" />
+          <div>
+            <h2>LTWC Isolated Market</h2>
+            <span style="background: rgba(16, 185, 129, 0.1); color: #10b981; padding: 0.25rem 0.75rem; border-radius: 4px; font-size: 0.8rem; font-family: var(--font-mono);">MARKET: LIVE</span>
+          </div>
+        </div>
+        <div class="data-grid">
+          <div class="data-card">
+            <div class="data-label">Morpho Market ID</div>
+            <div class="data-value" style="color: var(--color-text-secondary);">Institutional Deployment</div>
+          </div>
+          <div class="data-card">
+            <div class="data-label">Risk Parameters</div>
+            <div class="data-value highlight">86% LLTV Hard Cap</div>
+          </div>
+        </div>
+      </section>
+
+      <div style="margin-top: 4rem; padding: 2rem; background: rgba(0,0,0,0.4); border: 1px solid var(--color-border); border-radius: 8px;">
+        <h4 style="color: var(--color-text-secondary); text-transform: uppercase; letter-spacing: 1px; font-size: 0.8rem; margin-bottom: 0.5rem; font-family: var(--font-mono);">Internal Protocol Disclosure</h4>
+        <p style="font-size: 0.85rem; color: var(--color-text-secondary); margin: 0;"><strong>Primary Collateral vs Incentive Rewards:</strong> The primary JAB series tokens operating as isolated collateral within Morpho Blue are sovereign infrastructure assets and are strictly non-redeemable by external parties. Only the algorithmic JAB tokens distributed via the URD as yield incentives to USDC liquidity providers are eligible for secondary market exit via the Uniswap V3 pool. Liquidity providers withdrawing their principal USDC do so natively through Morpho's smart contracts, not via JAB token redemption.</p>
+      </div>
+    </div>
+
+    <footer style="border-top: 1px solid var(--color-border); padding: 3rem 0; margin-top: 2rem; background: var(--color-bg-secondary);">
+      <div class="container">
+        <p style="font-size: 0.75rem; color: var(--color-text-secondary); max-width: 800px; margin: 0 auto; text-align: center;">
+          <strong>STRICT REGULATORY COMPLIANCE NOTICE:</strong> The assets listed on this page are not offered or sold to retail US persons. They do not constitute an offer of an investment contract. LiteWater Capital DAO LLC operates these smart contracts strictly as Business-to-Business (B2B) infrastructure. Yields are generated mechanically via programmatic interaction with the Base blockchain and are not guaranteed by any central entity.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

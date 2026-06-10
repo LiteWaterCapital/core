@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/logo.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About | Litewater Capital DAO LLC</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <style>
+      :root {
+        --color-bg-primary: #0a0a0a;
+        --color-bg-secondary: #111111;
+        --color-text-primary: #f3f4f6;
+        --color-text-secondary: #9ca3af;
+        --color-accent: #3b82f6;
+        --color-border: #333333;
+        --font-main: 'Inter', system-ui, sans-serif;
+        --font-mono: 'SFMono-Regular', Consolas, monospace;
+      }
+      body { margin: 0; padding: 0; background-color: var(--color-bg-primary); color: var(--color-text-primary); font-family: var(--font-main); line-height: 1.6; }
+      .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+      header { padding: 1.5rem 0; border-bottom: 1px solid var(--color-border); background: rgba(10, 10, 10, 0.9); }
+      nav { display: flex; justify-content: space-between; align-items: center; }
+      .logo img { height: 40px; }
+      .nav-links { display: flex; gap: 2rem; align-items: center; }
+      .nav-link { color: var(--color-text-primary); text-decoration: none; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; transition: color 0.3s ease; }
+      .nav-link:hover { color: var(--color-accent); }
+      .cta-button { background: transparent; color: var(--color-text-primary); border: 1px solid var(--color-border); padding: 0.5rem 1.5rem; border-radius: 4px; text-decoration: none; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; }
+      
+      .about-section { padding: 6rem 0; }
+      .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+      @media (max-width: 768px) { .about-grid { grid-template-columns: 1fr; } }
+      .about-text h1 { font-size: 2.5rem; margin-bottom: 1.5rem; }
+      .about-text p { color: var(--color-text-secondary); font-size: 1.1rem; margin-bottom: 1.5rem; }
+      .about-image { display: flex; justify-content: center; }
+      .about-image img { width: 100%; max-width: 400px; filter: drop-shadow(0 0 20px rgba(255,255,255,0.1)); }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <nav>
+          <a href="/" class="logo"><img src="/logo.png" alt="Litewater Capital Logo" /></a>
+          <div class="nav-links">
+            <a href="about.html" class="nav-link" style="color: var(--color-accent);">About Us</a>
+            <a href="contact.html" class="nav-link">Contact</a>
+            <a href="jab-series.html" class="cta-button">Active Markets</a>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <section class="about-section">
+      <div class="container about-grid">
+        <div class="about-text">
+          <h4 style="font-family: var(--font-mono); color: var(--color-accent); text-transform: uppercase; letter-spacing: 1px; font-size: 0.85rem; margin-bottom: 0.5rem;">Stewards of a New Kingdom Economy</h4>
+          <h1>LiteWater Capital DAO</h1>
+          <p>
+            LiteWater Capital DAO LLC operates exclusively as a private fund manager for the treasury of its parent church. Entrusted with creating new opportunities for the faithful, we manage our resources to advance a profound spiritual mission. We do not act as a public hedge fund or commercial investment advisor. 
+          </p>
+          <p>
+            Our architecture is built on the fundamental principles of this Kingdom Economy: fairness, equity, security and mutual benefit. We are entrusted with bridging real-world, highly secure internal treasury assets with zero-trust decentralized money markets. 
+          </p>
+          <p>
+            By designing over-collateralized, smart-contract enforced infrastructure, we isolate risk and protect proprietary assets. We deploy strictly on a Business-to-Business (B2B) basis, partnering with elite decentralized liquidity providers to build scalable, algorithmic yield environments without exposing our operations to public retail speculation.
+          </p>
+        </div>
+        <div class="about-image">
+          <img src="/logo.png" alt="Litewater Capital Insignia" />
+        </div>
+      </div>
+    </section>
+
+    <footer style="border-top: 1px solid var(--color-border); padding: 3rem 0; margin-top: 2rem; background: var(--color-bg-secondary);">
+      <div class="container">
+        <p style="font-size: 0.75rem; color: var(--color-text-secondary); max-width: 800px; margin: 0 auto; text-align: center;">
+          &copy; 2026 LiteWater Capital DAO LLC. All Rights Reserved. Protected by the Kingdom Economy.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
