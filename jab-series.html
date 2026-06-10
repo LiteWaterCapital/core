@@ -185,11 +185,50 @@
       </div>
     </div>
 
-    <footer style="border-top: 1px solid var(--color-border); padding: 3rem 0; margin-top: 2rem; background: var(--color-bg-secondary);">
+    <footer>
       <div class="container">
-        <p style="font-size: 0.75rem; color: var(--color-text-secondary); max-width: 800px; margin: 0 auto; text-align: center;">
-          <strong>STRICT REGULATORY COMPLIANCE NOTICE:</strong> The assets listed on this page are not offered or sold to retail US persons. They do not constitute an offer of an investment contract. LiteWater Capital DAO LLC operates these smart contracts strictly as Business-to-Business (B2B) infrastructure. Yields are generated mechanically via programmatic interaction with the Base blockchain and are not guaranteed by any central entity.
-        </p>
+        <div class="footer-content" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 3rem; margin-bottom: 2rem;">
+          
+          <div class="footer-col">
+            <a href="/" class="logo">
+              <img src="/logo.png" alt="Litewater Capital Logo" style="height: 40px;" />
+            </a>
+            <p style="margin-top: 1rem; font-size: 0.85rem; color: var(--color-text-secondary);">Sovereign Treasury Auxiliary for its parent church.</p>
+            <a href="contact.html" class="primary-btn" style="text-decoration: none; display: inline-block; margin-top: 1rem; padding: 0.5rem 1.5rem; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; box-shadow: 0 0 15px rgba(59, 130, 246, 0.5); transition: all 0.3s ease;" onmouseover="this.style.boxShadow='0 0 25px rgba(59, 130, 246, 0.8)'; this.style.transform='translateY(-2px)'" onmouseout="this.style.boxShadow='0 0 15px rgba(59, 130, 246, 0.5)'; this.style.transform='translateY(0)'">Contact Us</a>
+          </div>
+
+          <div class="footer-col">
+            <h4 style="font-family: var(--font-mono); font-size: 0.85rem; text-transform: uppercase; margin-bottom: 1rem; color: white;">Open Source</h4>
+            <ul style="list-style: none; padding: 0; font-size: 0.85rem; display: flex; flex-direction: column; gap: 0.5rem;">
+              <li><a href="https://github.com/LiteWaterCapital/core" target="_blank" style="color: var(--color-text-secondary); text-decoration: none; transition: color 0.3s ease;" onmouseover="this.style.color='var(--color-accent)'" onmouseout="this.style.color='var(--color-text-secondary)'">GitHub Repository</a></li>
+              <li><a href="https://docs.litewatercapital.com" target="_blank" style="color: var(--color-text-secondary); text-decoration: none; transition: color 0.3s ease;" onmouseover="this.style.color='var(--color-accent)'" onmouseout="this.style.color='var(--color-text-secondary)'">GitBook Docs</a></li>
+              <li><a href="#" style="color: var(--color-text-secondary); text-decoration: none; transition: color 0.3s ease;" onmouseover="this.style.color='var(--color-accent)'" onmouseout="this.style.color='var(--color-text-secondary)'">Smart Contract Audits (Pending)</a></li>
+              <li><a href="#" style="color: var(--color-text-secondary); text-decoration: none; transition: color 0.3s ease;" onmouseover="this.style.color='var(--color-accent)'" onmouseout="this.style.color='var(--color-text-secondary)'">Bug Bounty (Pending)</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4 style="font-family: var(--font-mono); font-size: 0.85rem; text-transform: uppercase; margin-bottom: 1rem; color: white;">Legal & Risk</h4>
+            <ul style="list-style: none; padding: 0; font-size: 0.85rem; display: flex; flex-direction: column; gap: 0.5rem;">
+              <li><a href="risk.html" style="color: var(--color-text-secondary); text-decoration: none;">Risk Framework</a></li>
+              <li><a href="terms.html" style="color: var(--color-text-secondary); text-decoration: none;">Terms of Service</a></li>
+              <li><a href="regulatory.html" style="color: var(--color-text-secondary); text-decoration: none;">Regulatory Disclaimers</a></li>
+              <li><a href="privacy.html" style="color: var(--color-text-secondary); text-decoration: none;">Privacy Policy</a></li>
+            </ul>
+          </div>
+          
+        </div>
+        
+        <div class="footer-bottom" style="border-top: 1px solid var(--color-border); padding-top: 2rem; display: flex; justify-content: space-between; align-items: center; font-size: 0.75rem; font-family: var(--font-mono); flex-wrap: wrap; gap: 1rem;">
+          <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+            <p>&copy; 2026 LiteWater Capital DAO LLC. All Rights Reserved.</p>
+            <p><strong>REGULATORY NOTICE:</strong> LiteWater Capital DAO LLC operates exclusively as a B2B infrastructure provider. Access to decentralized markets is restricted to accredited institutional liquidity providers. Not offered or sold to retail US persons.</p>
+          </div>
+          <a href="https://westwyrd.ventures" target="_blank" style="display: flex; flex-direction: column; align-items: flex-end; gap: 0.5rem; text-decoration: none; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+            <span style="font-size: 0.7rem; text-transform: uppercase; letter-spacing: 2px; color: var(--color-text-secondary);">Protecting the Kingdom Economy with Westwyrd Infrastructure</span>
+            <img src="/westwyrd_logo.png" alt="Westwyrd" style="height: 55px; filter: brightness(0) invert(1);" />
+          </a>
+        </div>
       </div>
     </footer>
   </body>
