@@ -8,7 +8,7 @@ export default defineConfig({
       input: {
         main: resolve(__dirname, 'index.html'),
         about: resolve(__dirname, 'about.html'),
-        jab_series: resolve(__dirname, 'jab-series.html'),
+        jab_series: resolve(__dirname, 'vaults.html'),
         contact: resolve(__dirname, 'contact.html'),
         regulatory: resolve(__dirname, 'regulatory.html'),
         risk: resolve(__dirname, 'risk.html'),
