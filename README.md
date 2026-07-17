@@ -1,6 +1,6 @@
 # LiteWater Capital DAO LLC
 
-This repository contains the public smart contract interface for the LTWC treasury reserve token.
+This repository contains the public website and frontend interface for LiteWater Capital. All core smart contracts, proprietary treasury operations, and ZK attestation infrastructure are maintained in separate, secure private repositories.
 
 ### Institutional Architecture
 LTWC operates as the core unit of account for the LiteWater Capital DAO LLC treasury. 
