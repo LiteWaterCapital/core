@@ -110,35 +110,42 @@
         <div class="vault-header">
           <img src="/wUTXO_logo.png" alt="wUTXO Logo" style="width: 160px; height: 160px; margin: -20px;" />
           <div>
-            <h2>wUTXO Isolated Market</h2>
-            <div style="font-family: var(--font-mono); color: var(--color-accent); text-transform: uppercase; font-size: 0.8rem; margin-bottom: 0.8rem; letter-spacing: 1px;">Wrapped UTXO Asset - Bitcoin Backed</div>
-            <span style="background: rgba(16, 185, 129, 0.1); color: #10b981; padding: 0.25rem 0.75rem; border-radius: 4px; font-size: 0.8rem; font-family: var(--font-mono);">MARKET: LIVE</span>
+            <h2>wUTXO Senior Credit Market</h2>
+            <div style="font-family: var(--font-mono); color: var(--color-accent); text-transform: uppercase; font-size: 0.8rem; margin-bottom: 0.8rem; letter-spacing: 1px;">Wrapped UTXO Asset // Isolated Morpho Blue Vault (Base Mainnet)</div>
+            <span style="background: rgba(16, 185, 129, 0.15); color: #10b981; border: 1px solid rgba(16, 185, 129, 0.3); padding: 0.3rem 0.8rem; border-radius: 4px; font-size: 0.8rem; font-family: var(--font-mono); font-weight: bold; letter-spacing: 1px;">MARKET: ACTIVE SENIOR FACILITY</span>
           </div>
         </div>
         <div class="data-grid">
           <div class="data-card">
             <div class="data-label">Morpho Market ID</div>
-            <div class="data-value"><a href="https://app.morpho.org/base/market/0xc464ed522b12c3d340c6d82fc1415e770a296477196d26ba2b2435c4d1418a15" target="_blank" style="color: var(--color-accent); text-decoration: none; word-break: break-all;">0xc464ed522b12c3d340c6d82fc1415e770a296477196d26ba2b2435c4d1418a15 <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.75rem; margin-left: 0.25rem;"></i></a></div>
+            <div class="data-value"><a href="https://app.morpho.org/base/market/0x1ff9dfb806e6d0a9d1610858661ef085b0eb006ab18299e17e5a045fd3178c9f" target="_blank" style="color: var(--color-accent); text-decoration: none; word-break: break-all;">0x1ff9dfb806e6d0a9d1610858661ef085b0eb006ab18299e17e5a045fd3178c9f <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.75rem; margin-left: 0.25rem;"></i></a></div>
+            <div class="data-value" style="margin-top: 0.5rem; font-size: 0.75rem; color: var(--color-text-secondary);">Isolated Singleton: <a href="https://basescan.org/address/0xBBBBBbbBBb9cC5e90e3b3Af64bdAF62C37EEFFCb" target="_blank" style="color: var(--color-accent); text-decoration: none;">0xBBBB...FFCb</a></div>
           </div>
           <div class="data-card">
-            <div class="data-label">Risk Parameters</div>
-            <div class="data-value highlight">86.0% LLTV Hard Cap</div>
-            <div class="data-value" style="margin-top: 0.5rem; font-size: 0.8rem; color: var(--color-text-secondary);">AdaptiveCurveIRM (&lt; 90% Utilization)</div>
+            <div class="data-label">Risk Parameters &amp; LLTV</div>
+            <div class="data-value highlight">77.00% LLTV Hard Cap</div>
+            <div class="data-value" style="margin-top: 0.5rem; font-size: 0.8rem; color: var(--color-text-secondary);">13.00% Initial Facility LTV (769% Over-Collateralized)<br/>AdaptiveCurveIRM (&lt; 90% Target Utilization)</div>
           </div>
           <div class="data-card">
-            <div class="data-label">Deployment & Deposit Blocks</div>
-            <div class="data-value" style="font-size: 0.85rem; line-height: 1.4;">
-              Token Deployment: <span class="highlight">45219745</span><br/>
-              Market Creation: <span class="highlight">45253148</span><br/>
-              <span style="white-space: nowrap;">Collateral Deposit: <span class="highlight">46326024</span></span><br/>
-              <span style="white-space: nowrap;">(160,445.99776813 wUTXO)</span>
+            <div class="data-label">Downside Volatility Cushion</div>
+            <div class="data-value highlight">&gt; 83.00% Volatility Buffer</div>
+            <div class="data-value" style="margin-top: 0.5rem; font-size: 0.8rem; color: var(--color-text-secondary);">Liquidation Trigger: &lt; $13,678.00 / BTC Floor<br/>Chainlink Oracle: Fixed 1:1 BTC Price</div>
+          </div>
+          <div class="data-card">
+            <div class="data-label">Staged Facility Collateral</div>
+            <div class="data-value highlight">617.28395061 wUTXO</div>
+            <div class="data-value" style="margin-top: 0.5rem; font-size: 0.8rem; color: var(--color-text-secondary);">$50,000,000.00 Fair Market Asset Value ($81k Baseline)<br/>Initial Facility Draw: $6,500,000.00 USDC</div>
+          </div>
+          <div class="data-card">
+            <div class="data-label">Total Verified Supply &amp; Backing</div>
+            <div class="data-value">161,096.50 wUTXO<br/>
+              <span style="font-size: 0.75rem; color: var(--color-text-secondary);"><a href="https://basescan.org/token/0x0d2D82bBbda0f403D28A86A8e039F2CBbC28f857" target="_blank" style="color: var(--color-accent); text-decoration: none;">Base ERC-20: 0x0d2D...f857 <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.75rem;"></i></a><br/>16,165,390,941,538 Proven Cold-Custody Sats</span>
             </div>
           </div>
           <div class="data-card">
-            <div class="data-label">Total Collateral Pledged</div>
-            <div class="data-value">160,445.99776813 wUTXO<br/>
-              <span style="font-size: 0.75rem; color: var(--color-text-secondary);">Verified on Base L2</span>
-            </div>
+            <div class="data-label">Governance &amp; Recourse Standard</div>
+            <div class="data-value highlight">100% Asset-Based Lending</div>
+            <div class="data-value" style="margin-top: 0.5rem; font-size: 0.8rem; color: var(--color-text-secondary);"><a href="https://basescan.org/address/0x4D114ea53c59b11feFD31B234F8d0E5aEf49a2Ef" target="_blank" style="color: var(--color-accent); text-decoration: none;">Multi-Sig Safe: 0x4D11...a2Ef <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.75rem;"></i></a><br/>Zero Personal or Executive Recourse</div>
           </div>
         </div>
       </section>
